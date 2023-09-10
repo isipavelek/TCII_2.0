@@ -41,7 +41,7 @@ main-build: ADCMSIS.axf
 ADCMSIS.axf: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU Linker'
-	arm-none-eabi-gcc -nostdlib -L"C:\Users\ipave\Documents\GitHub\TCII\lpc_board_nxp_lpcxpresso_1769\Release" -L"C:\Users\ipave\Documents\GitHub\TCII\lpc_chip_175x_6x\Release" -L"C:\Users\ipave\Documents\GitHub\TCII\CMSIS_DSPLIB_CM3\lib" -Xlinker -Map="ADCMSIS.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T ADCMSIS_Release.ld -o "ADCMSIS.axf" $(OBJS) $(USER_OBJS) $(LIBS) -llpc_board_nxp_lpcxpresso_1769 -llpc_chip_175x_6x -lCMSIS_DSPLIB_CM3
+	arm-none-eabi-gcc -nostdlib -L"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_board_nxp_lpcxpresso_1769\Release" -L"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\Release" -L"C:\Users\ipave\Documentos\GitHub\TCII_2.0\CMSIS_DSPLIB_CM3\lib" -Xlinker -Map="ADCMSIS.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T ADCMSIS_Release.ld -o "ADCMSIS.axf" $(OBJS) $(USER_OBJS) $(LIBS) -llpc_board_nxp_lpcxpresso_1769 -llpc_chip_175x_6x -lCMSIS_DSPLIB_CM3
 	@echo 'Finished building target: $@'
 	@echo ' '
 

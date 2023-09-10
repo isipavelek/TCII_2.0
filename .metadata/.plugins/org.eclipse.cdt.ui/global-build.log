@@ -1,6 +1,29 @@
-22:54:12 **** Incremental Build of configuration Release for project lpc_board_nxp_lpcxpresso_1769 ****
-make -r -j8 all 
-make[1]: Nothing to be done for 'main-build'.
+13:20:18 **** Incremental Build of configuration Release for project lpc_board_nxp_lpcxpresso_1769 ****
+make -r -j16 all 
+Building file: ../src/board.c
+Building file: ../src/board_sysinit.c
+Building file: ../src/lpc_phy_smsc87x0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_board_nxp_lpcxpresso_1769\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/board.d" -MT"src/board.o" -MT"src/board.d" -o "src/board.o" "../src/board.c"
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_board_nxp_lpcxpresso_1769\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/board_sysinit.d" -MT"src/board_sysinit.o" -MT"src/board_sysinit.d" -o "src/board_sysinit.o" "../src/board_sysinit.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_board_nxp_lpcxpresso_1769\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/lpc_phy_smsc87x0.d" -MT"src/lpc_phy_smsc87x0.o" -MT"src/lpc_phy_smsc87x0.d" -o "src/lpc_phy_smsc87x0.o" "../src/lpc_phy_smsc87x0.c"
+../src/board.c: In function 'Board_I2C_Init':
+../src/board.c:267:9: warning: enumeration value 'I2C_NUM_INTERFACE' not handled in switch [-Wswitch]
+  267 |         switch (id) {
+      |         ^~~~~~
+Finished building: ../src/board_sysinit.c
+Finished building: ../src/lpc_phy_smsc87x0.c
+ 
+ 
+Finished building: ../src/board.c
+ 
+Building target: liblpc_board_nxp_lpcxpresso_1769.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "liblpc_board_nxp_lpcxpresso_1769.a" ./src/board.o ./src/board_sysinit.o ./src/lpc_phy_smsc87x0.o   
+Finished building target: liblpc_board_nxp_lpcxpresso_1769.a
+ 
 Performing post-build steps
 arm-none-eabi-size "liblpc_board_nxp_lpcxpresso_1769.a" ; # arm-none-eabi-objdump -h -S "liblpc_board_nxp_lpcxpresso_1769.a" >"liblpc_board_nxp_lpcxpresso_1769.lss"
    text	   data	    bss	    dec	    hex	filename
@@ -8,9 +31,185 @@ arm-none-eabi-size "liblpc_board_nxp_lpcxpresso_1769.a" ; # arm-none-eabi-objdum
     154	      0	      0	    154	     9a	board_sysinit.o (ex liblpc_board_nxp_lpcxpresso_1769.a)
     404	      0	     18	    422	    1a6	lpc_phy_smsc87x0.o (ex liblpc_board_nxp_lpcxpresso_1769.a)
  
-22:54:16 **** Incremental Build of configuration Release for project lpc_chip_175x_6x ****
-make -r -j8 all 
-make[1]: Nothing to be done for 'main-build'.
+13:20:18 **** Incremental Build of configuration Release for project lpc_chip_175x_6x ****
+make -r -j16 all 
+Building file: ../src/adc_17xx_40xx.c
+Building file: ../src/can_17xx_40xx.c
+Building file: ../src/chip_17xx_40xx.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/adc_17xx_40xx.d" -MT"src/adc_17xx_40xx.o" -MT"src/adc_17xx_40xx.d" -o "src/adc_17xx_40xx.o" "../src/adc_17xx_40xx.c"
+Building file: ../src/clock_17xx_40xx.c
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/can_17xx_40xx.d" -MT"src/can_17xx_40xx.o" -MT"src/can_17xx_40xx.d" -o "src/can_17xx_40xx.o" "../src/can_17xx_40xx.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/chip_17xx_40xx.d" -MT"src/chip_17xx_40xx.o" -MT"src/chip_17xx_40xx.d" -o "src/chip_17xx_40xx.o" "../src/chip_17xx_40xx.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/clock_17xx_40xx.d" -MT"src/clock_17xx_40xx.o" -MT"src/clock_17xx_40xx.d" -o "src/clock_17xx_40xx.o" "../src/clock_17xx_40xx.c"
+Building file: ../src/cmp_17xx_40xx.c
+Building file: ../src/crc_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/cmp_17xx_40xx.d" -MT"src/cmp_17xx_40xx.o" -MT"src/cmp_17xx_40xx.d" -o "src/cmp_17xx_40xx.o" "../src/cmp_17xx_40xx.c"
+Building file: ../src/dac_17xx_40xx.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/crc_17xx_40xx.d" -MT"src/crc_17xx_40xx.o" -MT"src/crc_17xx_40xx.d" -o "src/crc_17xx_40xx.o" "../src/crc_17xx_40xx.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/dac_17xx_40xx.d" -MT"src/dac_17xx_40xx.o" -MT"src/dac_17xx_40xx.d" -o "src/dac_17xx_40xx.o" "../src/dac_17xx_40xx.c"
+Building file: ../src/eeprom_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/eeprom_17xx_40xx.d" -MT"src/eeprom_17xx_40xx.o" -MT"src/eeprom_17xx_40xx.d" -o "src/eeprom_17xx_40xx.o" "../src/eeprom_17xx_40xx.c"
+Building file: ../src/emc_17xx_40xx.c
+Building file: ../src/enet_17xx_40xx.c
+../src/can_17xx_40xx.c: In function 'Chip_CAN_Init':
+../src/can_17xx_40xx.c:751:27: warning: variable 'i' set but not used [-Wunused-but-set-variable]
+  751 |         volatile uint32_t i;
+      |                           ^
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/emc_17xx_40xx.d" -MT"src/emc_17xx_40xx.o" -MT"src/emc_17xx_40xx.d" -o "src/emc_17xx_40xx.o" "../src/emc_17xx_40xx.c"
+Building file: ../src/gpdma_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/enet_17xx_40xx.d" -MT"src/enet_17xx_40xx.o" -MT"src/enet_17xx_40xx.d" -o "src/enet_17xx_40xx.o" "../src/enet_17xx_40xx.c"
+../src/clock_17xx_40xx.c: In function 'Chip_Clock_GetSYSCLKRate':
+Invoking: MCU C Compiler
+../src/clock_17xx_40xx.c:320:9: warning: enumeration value 'SYSCTL_PLLCLKSRC_RESERVED2' not handled in switch [-Wswitch]
+  320 |         switch (Chip_Clock_GetMainPLLSource()) {
+      |         ^~~~~~
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/gpdma_17xx_40xx.d" -MT"src/gpdma_17xx_40xx.o" -MT"src/gpdma_17xx_40xx.d" -o "src/gpdma_17xx_40xx.o" "../src/gpdma_17xx_40xx.c"
+Building file: ../src/gpio_17xx_40xx.c
+Invoking: MCU C Compiler
+Building file: ../src/gpioint_17xx_40xx.c
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/gpio_17xx_40xx.d" -MT"src/gpio_17xx_40xx.o" -MT"src/gpio_17xx_40xx.d" -o "src/gpio_17xx_40xx.o" "../src/gpio_17xx_40xx.c"
+Building file: ../src/i2c_17xx_40xx.c
+Building file: ../src/i2s_17xx_40xx.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/gpioint_17xx_40xx.d" -MT"src/gpioint_17xx_40xx.o" -MT"src/gpioint_17xx_40xx.d" -o "src/gpioint_17xx_40xx.o" "../src/gpioint_17xx_40xx.c"
+Building file: ../src/iap.c
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/i2c_17xx_40xx.d" -MT"src/i2c_17xx_40xx.o" -MT"src/i2c_17xx_40xx.d" -o "src/i2c_17xx_40xx.o" "../src/i2c_17xx_40xx.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/i2s_17xx_40xx.d" -MT"src/i2s_17xx_40xx.o" -MT"src/i2s_17xx_40xx.d" -o "src/i2s_17xx_40xx.o" "../src/i2s_17xx_40xx.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/iap.d" -MT"src/iap.o" -MT"src/iap.d" -o "src/iap.o" "../src/iap.c"
+Finished building: ../src/chip_17xx_40xx.c
+Finished building: ../src/cmp_17xx_40xx.c
+ 
+ 
+Finished building: ../src/adc_17xx_40xx.c
+Finished building: ../src/crc_17xx_40xx.c
+Building file: ../src/iocon_17xx_40xx.c
+ 
+Building file: ../src/lcd_17xx_40xx.c
+Finished building: ../src/dac_17xx_40xx.c
+ 
+Finished building: ../src/eeprom_17xx_40xx.c
+Invoking: MCU C Compiler
+Building file: ../src/pmu_17xx_40xx.c
+Invoking: MCU C Compiler
+ 
+ 
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/iocon_17xx_40xx.d" -MT"src/iocon_17xx_40xx.o" -MT"src/iocon_17xx_40xx.d" -o "src/iocon_17xx_40xx.o" "../src/iocon_17xx_40xx.c"
+Finished building: ../src/emc_17xx_40xx.c
+Finished building: ../src/clock_17xx_40xx.c
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/lcd_17xx_40xx.d" -MT"src/lcd_17xx_40xx.o" -MT"src/lcd_17xx_40xx.d" -o "src/lcd_17xx_40xx.o" "../src/lcd_17xx_40xx.c"
+Invoking: MCU C Compiler
+Finished building: ../src/gpio_17xx_40xx.c
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/pmu_17xx_40xx.d" -MT"src/pmu_17xx_40xx.o" -MT"src/pmu_17xx_40xx.d" -o "src/pmu_17xx_40xx.o" "../src/pmu_17xx_40xx.c"
+ 
+ 
+ 
+Building file: ../src/ring_buffer.c
+Building file: ../src/ritimer_17xx_40xx.c
+Building file: ../src/rtc_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/ring_buffer.d" -MT"src/ring_buffer.o" -MT"src/ring_buffer.d" -o "src/ring_buffer.o" "../src/ring_buffer.c"
+Building file: ../src/sdc_17xx_40xx.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+Finished building: ../src/gpioint_17xx_40xx.c
+Building file: ../src/sdmmc_17xx_40xx.c
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/ritimer_17xx_40xx.d" -MT"src/ritimer_17xx_40xx.o" -MT"src/ritimer_17xx_40xx.d" -o "src/ritimer_17xx_40xx.o" "../src/ritimer_17xx_40xx.c"
+Finished building: ../src/enet_17xx_40xx.c
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/rtc_17xx_40xx.d" -MT"src/rtc_17xx_40xx.o" -MT"src/rtc_17xx_40xx.d" -o "src/rtc_17xx_40xx.o" "../src/rtc_17xx_40xx.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/sdc_17xx_40xx.d" -MT"src/sdc_17xx_40xx.o" -MT"src/sdc_17xx_40xx.d" -o "src/sdc_17xx_40xx.o" "../src/sdc_17xx_40xx.c"
+ 
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/sdmmc_17xx_40xx.d" -MT"src/sdmmc_17xx_40xx.o" -MT"src/sdmmc_17xx_40xx.d" -o "src/sdmmc_17xx_40xx.o" "../src/sdmmc_17xx_40xx.c"
+ 
+Building file: ../src/spi_17xx_40xx.c
+Finished building: ../src/gpdma_17xx_40xx.c
+Invoking: MCU C Compiler
+Finished building: ../src/iap.c
+Building file: ../src/ssp_17xx_40xx.c
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/spi_17xx_40xx.d" -MT"src/spi_17xx_40xx.o" -MT"src/spi_17xx_40xx.d" -o "src/spi_17xx_40xx.o" "../src/spi_17xx_40xx.c"
+Building file: ../src/stopwatch_17xx_40xx.c
+ 
+ 
+Invoking: MCU C Compiler
+Finished building: ../src/lcd_17xx_40xx.c
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/ssp_17xx_40xx.d" -MT"src/ssp_17xx_40xx.o" -MT"src/ssp_17xx_40xx.d" -o "src/ssp_17xx_40xx.o" "../src/ssp_17xx_40xx.c"
+Invoking: MCU C Compiler
+Building file: ../src/sysctl_17xx_40xx.c
+Finished building: ../src/i2s_17xx_40xx.c
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/stopwatch_17xx_40xx.d" -MT"src/stopwatch_17xx_40xx.o" -MT"src/stopwatch_17xx_40xx.d" -o "src/stopwatch_17xx_40xx.o" "../src/stopwatch_17xx_40xx.c"
+ 
+Finished building: ../src/iocon_17xx_40xx.c
+Invoking: MCU C Compiler
+ 
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/sysctl_17xx_40xx.d" -MT"src/sysctl_17xx_40xx.o" -MT"src/sysctl_17xx_40xx.d" -o "src/sysctl_17xx_40xx.o" "../src/sysctl_17xx_40xx.c"
+Building file: ../src/sysinit_17xx_40xx.c
+Finished building: ../src/pmu_17xx_40xx.c
+ 
+Finished building: ../src/ring_buffer.c
+Invoking: MCU C Compiler
+ 
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/sysinit_17xx_40xx.d" -MT"src/sysinit_17xx_40xx.o" -MT"src/sysinit_17xx_40xx.d" -o "src/sysinit_17xx_40xx.o" "../src/sysinit_17xx_40xx.c"
+Building file: ../src/timer_17xx_40xx.c
+Building file: ../src/uart_17xx_40xx.c
+ 
+Building file: ../src/wwdt_17xx_40xx.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+../src/spi_17xx_40xx.c: In function 'Chip_SPI_Int_FlushData':
+../src/spi_17xx_40xx.c:138:27: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+  138 |         volatile uint32_t tmp;
+      |                           ^~~
+Invoking: MCU C Compiler
+Finished building: ../src/sdc_17xx_40xx.c
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/timer_17xx_40xx.d" -MT"src/timer_17xx_40xx.o" -MT"src/timer_17xx_40xx.d" -o "src/timer_17xx_40xx.o" "../src/timer_17xx_40xx.c"
+Finished building: ../src/i2c_17xx_40xx.c
+Finished building: ../src/ritimer_17xx_40xx.c
+Finished building: ../src/sdmmc_17xx_40xx.c
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/uart_17xx_40xx.d" -MT"src/uart_17xx_40xx.o" -MT"src/uart_17xx_40xx.d" -o "src/uart_17xx_40xx.o" "../src/uart_17xx_40xx.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/wwdt_17xx_40xx.d" -MT"src/wwdt_17xx_40xx.o" -MT"src/wwdt_17xx_40xx.d" -o "src/wwdt_17xx_40xx.o" "../src/wwdt_17xx_40xx.c"
+Finished building: ../src/rtc_17xx_40xx.c
+ 
+ 
+ 
+ 
+ 
+Finished building: ../src/sysctl_17xx_40xx.c
+Finished building: ../src/stopwatch_17xx_40xx.c
+Finished building: ../src/spi_17xx_40xx.c
+ 
+ 
+ 
+Finished building: ../src/can_17xx_40xx.c
+Finished building: ../src/sysinit_17xx_40xx.c
+ 
+ 
+Finished building: ../src/wwdt_17xx_40xx.c
+Finished building: ../src/timer_17xx_40xx.c
+ 
+ 
+Finished building: ../src/ssp_17xx_40xx.c
+ 
+Finished building: ../src/uart_17xx_40xx.c
+ 
+Building target: liblpc_chip_175x_6x.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "liblpc_chip_175x_6x.a" ./src/adc_17xx_40xx.o ./src/can_17xx_40xx.o ./src/chip_17xx_40xx.o ./src/clock_17xx_40xx.o ./src/cmp_17xx_40xx.o ./src/crc_17xx_40xx.o ./src/dac_17xx_40xx.o ./src/eeprom_17xx_40xx.o ./src/emc_17xx_40xx.o ./src/enet_17xx_40xx.o ./src/gpdma_17xx_40xx.o ./src/gpio_17xx_40xx.o ./src/gpioint_17xx_40xx.o ./src/i2c_17xx_40xx.o ./src/i2s_17xx_40xx.o ./src/iap.o ./src/iocon_17xx_40xx.o ./src/lcd_17xx_40xx.o ./src/pmu_17xx_40xx.o ./src/ring_buffer.o ./src/ritimer_17xx_40xx.o ./src/rtc_17xx_40xx.o ./src/sdc_17xx_40xx.o ./src/sdmmc_17xx_40xx.o ./src/spi_17xx_40xx.o ./src/ssp_17xx_40xx.o ./src/stopwatch_17xx_40xx.o ./src/sysctl_17xx_40xx.o ./src/sysinit_17xx_40xx.o ./src/timer_17xx_40xx.o ./src/uart_17xx_40xx.o ./src/wwdt_17xx_40xx.o   
+Finished building target: liblpc_chip_175x_6x.a
+ 
 Performing post-build steps
 arm-none-eabi-size "liblpc_chip_175x_6x.a" ; # arm-none-eabi-objdump -h -S "liblpc_chip_175x_6x.a" >"liblpc_chip_175x_6x.lss"
    text	   data	    bss	    dec	    hex	filename
@@ -47,30 +246,244 @@ arm-none-eabi-size "liblpc_chip_175x_6x.a" ; # arm-none-eabi-objdump -h -S "libl
     866	      0	      1	    867	    363	uart_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
      36	      0	      0	     36	     24	wwdt_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
  
-22:54:17 **** Incremental Build of configuration Release for project ADCMSIS ****
-make -r -j8 all 
+13:20:20 **** Incremental Build of configuration Release for project ADCMSIS ****
+make -r -j16 all 
 Building file: ../src/ADCMSIS.c
+Building file: ../src/adc.c
+Building file: ../src/cr_startup_lpc175x_6x.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DNDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -D__USE_CMSIS_DSPLIB=CMSIS_DSPLIB_CM3 -D__LPC17XX__ -D__REDLIB__ -I"C:\Users\ipave\Documents\GitHub\TCII\lpc_board_nxp_lpcxpresso_1769\inc" -I"C:\Users\ipave\Documents\GitHub\TCII\ADCMSIS\inc" -I"C:\Users\ipave\Documents\GitHub\TCII\lpc_chip_175x_6x\inc" -I"C:\Users\ipave\Documents\GitHub\TCII\CMSIS_DSPLIB_CM3\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/ADCMSIS.d" -MT"src/ADCMSIS.o" -MT"src/ADCMSIS.d" -o "src/ADCMSIS.o" "../src/ADCMSIS.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DNDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -D__USE_CMSIS_DSPLIB=CMSIS_DSPLIB_CM3 -D__LPC17XX__ -D__REDLIB__ -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_board_nxp_lpcxpresso_1769\inc" -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\ADCMSIS\inc" -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\CMSIS_DSPLIB_CM3\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/ADCMSIS.d" -MT"src/ADCMSIS.o" -MT"src/ADCMSIS.d" -o "src/ADCMSIS.o" "../src/ADCMSIS.c"
+Building file: ../src/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DNDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -D__USE_CMSIS_DSPLIB=CMSIS_DSPLIB_CM3 -D__LPC17XX__ -D__REDLIB__ -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_board_nxp_lpcxpresso_1769\inc" -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\ADCMSIS\inc" -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\CMSIS_DSPLIB_CM3\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/adc.d" -MT"src/adc.o" -MT"src/adc.d" -o "src/adc.o" "../src/adc.c"
+arm-none-eabi-gcc -DNDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -D__USE_CMSIS_DSPLIB=CMSIS_DSPLIB_CM3 -D__LPC17XX__ -D__REDLIB__ -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_board_nxp_lpcxpresso_1769\inc" -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\ADCMSIS\inc" -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\CMSIS_DSPLIB_CM3\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc175x_6x.d" -MT"src/cr_startup_lpc175x_6x.o" -MT"src/cr_startup_lpc175x_6x.d" -o "src/cr_startup_lpc175x_6x.o" "../src/cr_startup_lpc175x_6x.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DNDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -D__USE_CMSIS_DSPLIB=CMSIS_DSPLIB_CM3 -D__LPC17XX__ -D__REDLIB__ -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_board_nxp_lpcxpresso_1769\inc" -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\ADCMSIS\inc" -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\CMSIS_DSPLIB_CM3\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Building file: ../src/dac.c
+Building file: ../src/filter.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DNDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -D__USE_CMSIS_DSPLIB=CMSIS_DSPLIB_CM3 -D__LPC17XX__ -D__REDLIB__ -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_board_nxp_lpcxpresso_1769\inc" -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\ADCMSIS\inc" -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\CMSIS_DSPLIB_CM3\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/dac.d" -MT"src/dac.o" -MT"src/dac.d" -o "src/dac.o" "../src/dac.c"
+Building file: ../src/sysinit.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DNDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -D__USE_CMSIS_DSPLIB=CMSIS_DSPLIB_CM3 -D__LPC17XX__ -D__REDLIB__ -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_board_nxp_lpcxpresso_1769\inc" -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\ADCMSIS\inc" -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\CMSIS_DSPLIB_CM3\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/filter.d" -MT"src/filter.o" -MT"src/filter.d" -o "src/filter.o" "../src/filter.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DNDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -D__USE_CMSIS_DSPLIB=CMSIS_DSPLIB_CM3 -D__LPC17XX__ -D__REDLIB__ -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_board_nxp_lpcxpresso_1769\inc" -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\ADCMSIS\inc" -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\inc" -I"C:\Users\ipave\Documentos\GitHub\TCII_2.0\CMSIS_DSPLIB_CM3\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/sysinit.d" -MT"src/sysinit.o" -MT"src/sysinit.d" -o "src/sysinit.o" "../src/sysinit.c"
+../src/filter.c:25:36: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                    ^
+../src/filter.c:25:36: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:46: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                              ^
+../src/filter.c:25:46: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:56: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                        ^
+../src/filter.c:25:56: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:66: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                  ^
+../src/filter.c:25:66: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:75: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                           ^~~~~~~
+../src/filter.c:25:75: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:83: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                   ^~~~~~~~
+../src/filter.c:25:83: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:92: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                            ^~~~~~~~
+../src/filter.c:25:92: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:101: warning: excess elements in array initializer
+Finished building: ../src/crp.c
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                     ^~~~~~~~
+../src/filter.c:25:101: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:110: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                              ^~~~~~~~
+../src/filter.c:25:110: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:119: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                       ^~~~~~~~
+../src/filter.c:25:119: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:128: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                ^
+../src/filter.c:25:128: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:137: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                         ^
+../src/filter.c:25:137: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:147: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                   ^
+../src/filter.c:25:147: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:157: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                             ^
+../src/filter.c:25:157: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:167: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                                       ^
+../src/filter.c:25:167: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:177: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                                                 ^
+../src/filter.c:25:177: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:187: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                                                           ^
+ 
+../src/filter.c:25:187: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:197: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                                                                     ^~~~~~~~
+../src/filter.c:25:197: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:206: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                                                                              ^~~~~~~~~
+../src/filter.c:25:206: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:216: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                                                                                        ^~~~~~~~~
+../src/filter.c:25:216: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:226: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                                                                                                  ^~~~~~~~~
+../src/filter.c:25:226: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:236: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                                                                                                            ^~~~~~~~~
+../src/filter.c:25:236: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:246: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                                                                                                                      ^~~~~~~~~
+../src/filter.c:25:246: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:256: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                                                                                                                                ^~~~~~~~~
+../src/filter.c:25:256: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:266: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                                                                                                                                          ^~~~~~~~~
+../src/filter.c:25:266: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:276: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                                                                                                                                                    ^~~~~~~~~
+../src/filter.c:25:276: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:286: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                                                                                                                                                              ^~~~~~~~~
+../src/filter.c:25:286: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:296: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                                                                                                                                                                        ^~~~~~~~~
+../src/filter.c:25:296: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:306: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                                                                                                                                                                                  ^~~~~~~~
+../src/filter.c:25:306: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:315: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                                                                                                                                                                                           ^
+../src/filter.c:25:315: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:325: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                                                                                                                                                                                                     ^
+../src/filter.c:25:325: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:335: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                                                                                                                                                                                                               ^
+../src/filter.c:25:335: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:345: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                                                                                                                                                                                                                         ^
+../src/filter.c:25:345: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:355: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                                                                                                                                                                                                                                   ^
+../src/filter.c:25:355: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:365: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                                                                                                                                                                                                                                             ^
+../src/filter.c:25:365: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:375: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                                                                                                                                                                                                                                                       ^
+Finished building: ../src/cr_startup_lpc175x_6x.c
+../src/filter.c:25:375: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:384: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                                                                                                                                                                                                                                                                ^~~~~~~~
+../src/filter.c:25:384: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:393: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                                                                                                                                                                                                                                                                         ^~~~~~~~
+../src/filter.c:25:393: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:402: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                                                                                                                                                                                                                                                                                  ^~~~~~~~
+../src/filter.c:25:402: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:411: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                                                                                                                                                                                                                                                                                           ^~~~~~~~
+../src/filter.c:25:411: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:420: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                                                                                                                                                                                                                                                                                                    ^~~~~~~~
+../src/filter.c:25:420: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:429: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                                                                                                                                                                                                                                                                                                             ^~~~~~~
+../src/filter.c:25:429: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:437: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                                                                                                                                                                                                                                                                                                                     ^
+../src/filter.c:25:437: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:446: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                                                                                                                                                                                                                                                                                                                              ^
+Finished building: ../src/adc.c
+../src/filter.c:25:446: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:456: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ^
+../src/filter.c:25:456: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:466: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+ 
+      |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ^
+../src/filter.c:25:466: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:476: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ^
+../src/filter.c:25:476: note: (near initialization for 'lowpass_taps')
+../src/filter.c:25:486: warning: excess elements in array initializer
+   25 |                 27007681,-47033934,-32742422,-26225556,-19252544,-8941305,4448580,18621127,30205138,35692383,32386443,19468332,-1659469,-27065861,-50977424,-66605742,-67722637,-49665605,-10922460,46367109,116213266,190241875,258096318,309982673,338102184,338102184,309982673,258096318,190241875,116213266,46367109,-10922460,-49665605,-67722637,-66605742,-50977424,-27065861,-1659469,19468332,32386443,35692383,30205138,18621127,4448580,-8941305,-19252544,-26225556,-32742422,-47033934,27007681
+      |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ^~~~~~~~
+../src/filter.c:25:486: note: (near initialization for 'lowpass_taps')
+Finished building: ../src/dac.c
+ 
 Finished building: ../src/ADCMSIS.c
+Finished building: ../src/sysinit.c
+ 
+ 
+ 
+Finished building: ../src/filter.c
  
 Building target: ADCMSIS.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\ipave\Documents\GitHub\TCII\lpc_board_nxp_lpcxpresso_1769\Release" -L"C:\Users\ipave\Documents\GitHub\TCII\lpc_chip_175x_6x\Release" -L"C:\Users\ipave\Documents\GitHub\TCII\CMSIS_DSPLIB_CM3\lib" -Xlinker -Map="ADCMSIS.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T ADCMSIS_Release.ld -o "ADCMSIS.axf" ./src/ADCMSIS.o ./src/adc.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/dac.o ./src/filter.o ./src/sysinit.o    -llpc_board_nxp_lpcxpresso_1769 -llpc_chip_175x_6x -lCMSIS_DSPLIB_CM3
+arm-none-eabi-gcc -nostdlib -L"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_board_nxp_lpcxpresso_1769\Release" -L"C:\Users\ipave\Documentos\GitHub\TCII_2.0\lpc_chip_175x_6x\Release" -L"C:\Users\ipave\Documentos\GitHub\TCII_2.0\CMSIS_DSPLIB_CM3\lib" -Xlinker -Map="ADCMSIS.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T ADCMSIS_Release.ld -o "ADCMSIS.axf" ./src/ADCMSIS.o ./src/adc.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/dac.o ./src/filter.o ./src/sysinit.o    -llpc_board_nxp_lpcxpresso_1769 -llpc_chip_175x_6x -lCMSIS_DSPLIB_CM3
 Memory region         Used Size  Region Size  %age Used
        MFlash512:        4248 B       512 KB      0.81%
         RamLoc32:        3416 B        32 KB     10.42%
         RamAHB32:          0 GB        32 KB      0.00%
 Finished building target: ADCMSIS.axf
  
-Performing post-build steps
-arm-none-eabi-size "ADCMSIS.axf"; # arm-none-eabi-objcopy -v -O binary "ADCMSIS.axf" "ADCMSIS.bin" ; # checksum -p LPC1769 -d "ADCMSIS.bin";
-   text	   data	    bss	    dec	    hex	filename
-   4116	    132	   3284	   7532	   1d6c	ADCMSIS.axf
- 
-22:54:35 **** Incremental Build of configuration Release for project ADCMSIS ****
-make -r -j8 all 
-make[1]: Nothing to be done for 'main-build'.
 Performing post-build steps
 arm-none-eabi-size "ADCMSIS.axf"; # arm-none-eabi-objcopy -v -O binary "ADCMSIS.axf" "ADCMSIS.bin" ; # checksum -p LPC1769 -d "ADCMSIS.bin";
    text	   data	    bss	    dec	    hex	filename
