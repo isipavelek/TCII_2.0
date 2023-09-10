@@ -1,0 +1,93 @@
+/*
+===============================================================================
+ Name        : ADCMSIS.c
+ Author      : $(author)
+ Version     :
+ Copyright   : $(copyright)
+ Description : main definition
+===============================================================================
+*/
+
+#if defined (__USE_LPCOPEN)
+#if defined(NO_BOARD_LIB)
+#include "chip.h"
+#else
+#include "board.h"
+#endif
+#endif
+
+#include <cr_section_macros.h>
+
+
+#include "adc.h"
+#include "dac.h"
+#include "lowpass.h"
+#include "bandpass.h"
+#include "fir_q31.h"
+#include "arm_math.h"
+
+
+
+
+
+#define USAR_FUNCIONES_ASSEMBLER	1
+
+#define SAMPLES_PER_BLOCK 512
+
+#define FILTRO_PASA_BANDA			0
+#define FILTRO_PASA_BAJOS			(!FILTRO_PASA_BANDA)
+
+#if FILTRO_PASA_BANDA
+int history[BANDPASS_TAP_NUM];
+#elif FILTRO_PASA_BAJOS
+int history[LOWPASS_TAP_NUM];
+#endif
+
+
+arm_fir_instance_q31 S;
+fir_q31_t filtro;
+q31_t * lowpass_state=LOWPASS_TAP_NUM+SAMPLES_PER_BLOCK-1;
+
+int y[500];
+
+int main(void) {
+
+    int i=0, offset;
+#if defined (__USE_LPCOPEN)
+    // Read clock settings and update SystemCoreClock variable
+    SystemCoreClockUpdate();
+#if !defined(NO_BOARD_LIB)
+    // Set up and initialize all required blocks and
+    // functions related to the board hardware
+    Board_Init();
+    // Set the LED to the state of "On"
+    Board_LED_Set(0, true);
+#endif
+#endif
+
+    	//arm_float_to_q31(lowpass_taps_float,lowpass_taps,LOWPASS_TAP_NUM);
+
+    	arm_fir_init_q31(&S,LOWPASS_TAP_NUM,lowpass_taps,lowpass_state,SAMPLES_PER_BLOCK);
+        adcInit();
+        dacInit();
+
+
+    	while(1){
+    		if(adcFlag){
+    			adcFlag=0;
+    #if(USAR_FUNCIONES_ASSEMBLER)
+    			y[i] = asm_fir_q31_get(&filtro)+offset;
+    			y[i] = __USAT(y[i],10);
+    #else
+    			y[i] = fir_q31_get(&filtro)+offset;
+    			if(y[i]>0x3FF) y[i] = 0x3FF;
+    			else if(y[i]<0) y[i] = 0;
+    #endif
+    			dacWrite(y[i]);
+    			i++;
+    			if(i==500)
+    				i=0;
+			}
+	}
+
+}

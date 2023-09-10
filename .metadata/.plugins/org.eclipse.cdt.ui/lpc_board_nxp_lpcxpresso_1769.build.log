@@ -1,0 +1,13 @@
+22:54:12 **** Incremental Build of configuration Release for project lpc_board_nxp_lpcxpresso_1769 ****
+make -r -j8 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "liblpc_board_nxp_lpcxpresso_1769.a" ; # arm-none-eabi-objdump -h -S "liblpc_board_nxp_lpcxpresso_1769.a" >"liblpc_board_nxp_lpcxpresso_1769.lss"
+   text	   data	    bss	    dec	    hex	filename
+   1001	      0	      0	   1001	    3e9	board.o (ex liblpc_board_nxp_lpcxpresso_1769.a)
+    154	      0	      0	    154	     9a	board_sysinit.o (ex liblpc_board_nxp_lpcxpresso_1769.a)
+    404	      0	     18	    422	    1a6	lpc_phy_smsc87x0.o (ex liblpc_board_nxp_lpcxpresso_1769.a)
+ 
+
+22:54:15 Build Finished. 0 errors, 0 warnings. (took 3s.445ms)
+

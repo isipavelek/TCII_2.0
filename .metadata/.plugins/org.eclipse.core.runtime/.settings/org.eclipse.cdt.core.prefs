@@ -1,0 +1,10 @@
+ToolChainManager/order/n=0
+build.all.configs.enabled=false
+build.proj.ref.configs.enabled=false
+eclipse.preferences.version=1
+errorparser.default.ids=org.eclipse.cdt.autotools.core.ErrorParser;org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GmakeErrorParser;org.eclipse.cdt.core.VCErrorParser;org.eclipse.cdt.core.CWDLocator;org.eclipse.cdt.core.MakeErrorParser
+language.settings.providers.workspace.prefs.toggle=true
+macros/workspace=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<macros>\r\n    <stringMacro name\="project.flashdriver.dir" type\="VALUE_PATH_DIR" value\=""/>\r\n    <stringMacro name\="SDK_LPC_RESOURCES" type\="VALUE_PATH_DIR" value\="C\:\\nxp\\MCUXpressoIDE_11.6.0_8187\\ide\\plugins\\com.nxp.mcuxpresso.core.datamodels.resources_11.6.0.202207040730\\override"/>\r\n</macros>\r\n
+org.eclipse.cdt.core.showSourceRootsAtTopLevelOfProject=true
+org.eclipse.cdt.core.taskPriorities=normal,normal,normal
+org.eclipse.cdt.core.taskTags=TODO,FIXME,XXX
