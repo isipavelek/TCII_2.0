@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;ADCMSIS/inc/lowpass.h&apos; to &apos;filter.h&apos;" description="Rename resource &apos;lowpass.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="inc/lowpass.h" name="filter.h" stamp="1661469379931" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;ADCMSIS/src/lowpass.c&apos; to &apos;filter.c&apos;" description="Rename resource &apos;lowpass.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/lowpass.c" name="filter.c" stamp="1661469394276" updateReferences="true"/>
-</session>
