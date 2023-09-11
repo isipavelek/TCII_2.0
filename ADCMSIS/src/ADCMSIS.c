@@ -67,7 +67,8 @@ int main(void) {
 
     //Inicializa los filtros
    // arm_fir_init_q31(&SLP,LOWPASS_TAP_NUM,lowpass_taps,lowpass_state,SAMPLES_PER_BLOCK);
-	arm_biquad_cascade_df1_init_q31	(&SBIQUAD1,1,biquad1_taps,biquad1_state,0);
+    arm_biquad_cascade_df1_init_q31	(&SBIQUAD1,1,biquad1_taps,biquad1_state,0);
+    arm_float_to_q31(float_lowpass_taps, lowpass_taps,LOWPASS_TAP_NUM);
     arm_fir_init_q31(&SPROM,PROM_TAP_NUM,prom_taps,prom_state,SAMPLES_PER_BLOCK);
 
 	//Inicializa ADC y DAC
